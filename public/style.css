@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 120px;
+    font-family: monospace;
+}
+
+.options label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e4fd8;
+}
+
+pre {
+    background: #111;
+    color: #0f0;
+    padding: 15px;
+    overflow-x: auto;
+    margin-top: 20px;
+}

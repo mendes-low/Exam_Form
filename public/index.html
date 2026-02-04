@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Student Exam</title>
+        <link rel="stylesheet" href="./style.css">
+    <body>
+        <div class="container">
+            <h1>Programming Exam</h1>
+
+            <!-- Student info -->
+            <label>Name</label>
+            <input type="text" id="name" />
+
+            <label>Class</label>
+            <select id="class">
+                <option value="">Select class</option>
+                <option value="10A">10A</option>
+                <option value="10B">10B</option>
+                <option value="11A">11A</option>
+            </select>
+
+            <!-- Test questions -->
+            <h2>Test Questions</h2>
+
+            <div id="tests">
+                <!-- Question 1 -->
+                <label>1. What does HTML stand for?</label>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A" /> A</label>
+                    <label><input type="radio" name="q1" value="B" /> B</label>
+                    <label><input type="radio" name="q1" value="C" /> C</label>
+                </div>
+
+                <label>2. Which is a JavaScript framework?</label>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A" /> A</label>
+                    <label><input type="radio" name="q2" value="B" /> B</label>
+                    <label><input type="radio" name="q2" value="C" /> C</label>
+                </div>
+
+                <label>3. What keyword declares a variable?</label>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A" /> A</label>
+                    <label><input type="radio" name="q3" value="B" /> B</label>
+                    <label><input type="radio" name="q3" value="C" /> C</label>
+                </div>
+
+                <label>4. Which tag is for JavaScript?</label>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A" /> A</label>
+                    <label><input type="radio" name="q4" value="B" /> B</label>
+                    <label><input type="radio" name="q4" value="C" /> C</label>
+                </div>
+
+                <label>5. What is CSS used for?</label>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A" /> A</label>
+                    <label><input type="radio" name="q5" value="B" /> B</label>
+                    <label><input type="radio" name="q5" value="C" /> C</label>
+                </div>
+            </div>
+
+            <!-- Code tasks -->
+            <h2>Code Tasks</h2>
+
+            <label>Task 1</label>
+            <textarea id="code1"></textarea>
+
+            <label>Task 2</label>
+            <textarea id="code2"></textarea>
+
+            <label>Task 3</label>
+            <textarea id="code3"></textarea>
+
+            <label>Task 4</label>
+            <textarea id="code4"></textarea>
+
+            <label>Task 5</label>
+            <textarea id="code5"></textarea>
+
+            <button id="submitButton">Submit Exam</button>
+
+            <!-- <pre id="result"></pre> -->
+        </div>
+
+        <script src="../server.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>
