@@ -1,67 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-h2 {
-    margin-top: 30px;
+h1, h2 {
+  color: #00ffcc;
 }
 
 label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #00e6b8;
 }
 
-input,
-select,
-textarea {
+select {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-textarea {
-    min-height: 120px;
-    font-family: monospace;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #2d2d2d;
+    color: #fff;
 }
 
 .options label {
-    font-weight: normal;
-    display: inline-block;
     margin-right: 15px;
+    color: #ffffff;
 }
 
 button {
-    margin-top: 30px;
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #00ffcc;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-    background: #1e4fd8;
+  background: #00e6b8;
 }
 
-pre {
-    background: #111;
-    color: #0f0;
-    padding: 15px;
-    overflow-x: auto;
-    margin-top: 20px;
+.editor {
+  height: 250px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
 }

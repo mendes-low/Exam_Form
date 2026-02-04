@@ -7,44 +7,36 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <form id="examForm">
-            <label>Name</label>
-            <input type="text" name="name" />
+        <div class="container">
+            <h1>Programming Exam</h1>
 
             <label>Class</label>
-            <select name="class">
+            <select id="classSelect">
                 <option value="">Select class</option>
-                <option value="10A">10A</option>
-                <option value="10B">10B</option>
-                <option value="11A">11A</option>
+                <option value="26_1">26/1</option>
+                <option value="26_4">26/4</option>
+            </select>
+
+            <label>Name</label>
+            <select id="nameSelect">
+                <option value="">Select student</option>
             </select>
 
             <h2>Test Questions</h2>
-            <label>1. What does HTML stand for?</label>
-            <div class="options">
-                <label><input type="radio" name="q1" value="A" /> A</label>
-                <label><input type="radio" name="q1" value="B" /> B</label>
-                <label><input type="radio" name="q1" value="C" /> C</label>
-            </div>
+            <div id="tests"></div>
 
-            <label>Task 1</label>
-            <textarea id="code1" name="code1"></textarea>
+            <h2>Code Tasks</h2>
+            <div id="code-tasks"></div>
 
-            <label>Task 2</label>
-            <textarea id="code2" name="code2"></textarea>
+            <button id="submitButton">Submit Exam</button>
+        </div>
+        <!-- ===== Ace Editor CDN ===== -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.23.1/ace.js"
+            referrerpolicy="no-referrer"
+        ></script>
 
-            <label>Task 3</label>
-            <textarea id="code3" name="code3"></textarea>
-
-            <label>Task 4</label>
-            <textarea id="code4" name="code4"></textarea>
-
-            <label>Task 5</label>
-            <textarea id="code5" name="code5"></textarea>
-
-            <button type="submit">Submit Exam</button>
-        </form>
-
+        <!-- ===== Firebase ===== -->
         <script type="module" src="./script.js"></script>
     </body>
 </html>
