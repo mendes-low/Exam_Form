@@ -15,18 +15,12 @@ async function submitExam() {
         data.codeAnswers.push(document.getElementById(`code${i}`).value);
     }
 
-    const response = await fetch("http://localhost:3000/submit", {
+    const res = await fetch("/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
     });
 
-    const result = await response.json();
+    const result = await res.json();
     alert(result.message);
 }
-
-let button = document.querySelector("#submitButton");
-
-button.addEventListener("click", () => {
-    submitExam();
-});

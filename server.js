@@ -15,7 +15,7 @@ const FILE = "./answers.json";
 app.post("/submit", (req, res) => {
     const newAnswer = {
         ...req.body,
-        submittedAt: new Date().getDate(),
+        submittedAt: new Date().toISOString(),
     };
 
     let data = [];
