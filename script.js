@@ -37,6 +37,14 @@ const studentsByClass = {
         "Айгерім С",
         "Айгерім Ж",
     ],
+    "26_3": [
+        "Мирас",
+        "Мақпал",
+        "Ақнар",
+        "Азамат",
+        "Ерлан",
+        "Мұхамедәмин"
+    ],
     "26_4": [
         "Жанарыс",
         "Мадияр",
@@ -280,7 +288,7 @@ questions.forEach((q, index) => {
 const tasks = [
     "Екі функция жазу addBook(title, author, section, year) және removeBookByName(title)",
     "changeLibraryName(newName) және changeLibraryRating(newRating)",
-    "3 функция жазу керек addSection(sectionName), removeSection(sectionName)",
+    "2 функция жазу керек addSection(sectionName), removeSection(sectionName)",
     "section атын өзгертуге арналған функция жазу renameSection(oldName, newName)",
     "Ең ескі кітәпті қайтаратын функция жазу getOldestBook()",
 ];
@@ -305,7 +313,7 @@ for (let i = 0; i < tasks.length; i++) {
     editor.on("paste", function (text) {
         const value = editor.getValue();
         editor.setValue(value.replace(/\r\n|\n|\r/g, ""), -1);
-        alert("Қай жерден алдын ? АААААА");
+        alert("Қай жерден алдын? Сол жерге қайтадан қоя сал! АХАХАХАХАХАХ");
     });
 
     editor.container.addEventListener("copy", function (e) {
@@ -317,7 +325,7 @@ for (let i = 0; i < tasks.length; i++) {
         name: "blockPaste",
         bindKey: { win: "Ctrl-V", mac: "Command-V" },
         exec: function () {
-            alert("Қай жерден алдын ? ААААА");
+            alert("Қай жерден алдын? Сол жерге қайтадан қоя сал! АХАХАХАХАХАХ");
         },
         readOnly: false,
     });
