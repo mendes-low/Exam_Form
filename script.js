@@ -64,8 +64,8 @@ const tasks = [
     "Екі функция жазу addBook(title, author, section, year) және removeBookByName(title)",
     "changeLibraryName(newName) және changeLibraryRating(newRating)",
     "3 функция жазу керек addSection(sectionName), removeSection(sectionName)",
-    "renameSection(oldName, newName)",
-    "getOldestBook()",
+    "section атын өзгертуге арналған функция жазу renameSection(oldName, newName)",
+    "Ең ескі кітәпті қайтаратын функция жазу getOldestBook()",
 ];
 
 const codeTasksContainer = document.getElementById("code-tasks");
@@ -143,36 +143,41 @@ document.getElementById("submitButton").addEventListener("click", async () => {
     }
 });
 
-//
 const questions = [
     {
-        text: "What does HTML stand for?",
+        text: "Decstructuring не үшін қажет ?",
         options: [
-            "HyperText Markup Language",
-            "Home Tool Markup Language",
-            "Hyperlinks and Text Markup Language",
+            "Массивті распаковка жасау үшін",
+            "Объектті распаковка жасау үшін.",
+            "Массив пен Объекттен элементтерін бөлек айнымалы ретінде алу",
+            "Объект пен Массивты распаковка жасау үшін",
         ],
     },
     {
-        text: "Which is a JavaScript framework?",
-        options: ["React", "HTML", "CSS"],
+        text: "Осы код нені шығарады const [productName = 'iPhone', price = 1000] = ['MacBook', '500'] console.log(productName)",
+        options: ["IPhone", "''", "Қате", "500", "MacBook", "IPhoneMAcBook"],
     },
     {
-        text: "Which keyword declares a variable?",
-        options: ["let", "func", "dim"],
+        text: "Функциянын қанша негізгі түрі бар ?",
+        options: ["2", "1", "Функциянын түрлері жоқ", "3"],
     },
     {
-        text: "Which tag is for JavaScript?",
-        options: ["<script>", "<js>", "<javascript>"],
+        text: "Object та қандай типтер сақтауға болады?",
+        options: [
+            "Boolean, array, object, number, string",
+            "null, function, array, number, boolean, string",
+            "undefined, null, number, function, array, string, boolean, object",
+            "function, string, number, boolean, array, object, null",
+        ],
     },
     {
-        text: "What is CSS used for?",
-        options: ["Styling web pages", "Storing data", "Running JavaScript"],
+        text: "object қай форматта құралады ?",
+        options: ["property value", "key value", "key property", "index value"],
     },
     {
-        text: "Which HTML element is used for the largest heading?",
-        options: ["<h1>", "<h6>", "<header>"],
-    }
+        text: "JavaScript қанша данный типтері бар?",
+        options: ["5", "7", "4", "6", "8"],
+    },
 ];
 
 const testsDiv = document.getElementById("tests");
