@@ -59,10 +59,19 @@ classSelect.addEventListener("change", () => {
 });
 
 const editors = {};
+
+const tasks = [
+    "Екі функция жазу addBook(title, author, section, year) және removeBookByName(title)",
+    "changeLibraryName(newName) және changeLibraryRating(newRating)",
+    "3 функция жазу керек addSection(sectionName), removeSection(sectionName)",
+    "renameSection(oldName, newName)",
+    "getOldestBook()",
+];
+
 const codeTasksContainer = document.getElementById("code-tasks");
-for (let i = 1; i <= 5; i++) {
+tasks.forEach((i, index) => {
     const label = document.createElement("label");
-    label.textContent = `Task ${i}`;
+    label.textContent = `Task ${index + 1}: ${i}`;
     const div = document.createElement("div");
     div.id = "code" + i;
     div.className = "editor";
@@ -76,11 +85,11 @@ for (let i = 1; i <= 5; i++) {
     editor.setOptions({ fontSize: "14pt", tabSize: 2, useSoftTabs: true });
 
     editor.on("paste", function (text) {
-        setTimeout(() => {
-            const value = editor.getValue();
-            editor.setValue(value.replace(/\r\n|\n|\r/g, ""), -1);
-            alert("Pasting is disabled!");
-        }, 0);
+        // setTimeout(() => {
+        const value = editor.getValue();
+        editor.setValue(value.replace(/\r\n|\n|\r/g, ""), -1);
+        alert("Pasting is disabled!");
+        // }, 0);
     });
 
     editor.container.addEventListener("copy", function (e) {
@@ -104,7 +113,7 @@ for (let i = 1; i <= 5; i++) {
         },
         readOnly: false,
     });
-}
+});
 
 document.getElementById("submitButton").addEventListener("click", async () => {
     const testAnswers = [];
@@ -163,27 +172,7 @@ const questions = [
     {
         text: "Which HTML element is used for the largest heading?",
         options: ["<h1>", "<h6>", "<header>"],
-    },
-    {
-        text: "What does DOM stand for?",
-        options: [
-            "Document Object Model",
-            "Data Object Management",
-            "Digital Order Method",
-        ],
-    },
-    {
-        text: "Which method converts JSON to JavaScript object?",
-        options: ["JSON.parse()", "JSON.stringify()", "JSON.toObject()"],
-    },
-    {
-        text: "Which operator is used for strict equality?",
-        options: ["===", "==", "!="],
-    },
-    {
-        text: "Which property changes text color in CSS?",
-        options: ["color", "background-color", "font-style"],
-    },
+    }
 ];
 
 const testsDiv = document.getElementById("tests");
