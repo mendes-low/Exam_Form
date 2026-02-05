@@ -289,7 +289,7 @@ const codeTasksContainer = document.getElementById("code-tasks");
 for (let i = 0; i < tasks.length; i++) {
     
     const label = document.createElement("label");
-    label.textContent = `Task ${i}: ${tasks[i]}`;
+    label.textContent = `Task ${i + 1}: ${tasks[i]}`;
     const div = document.createElement("div");
     div.id = "code" + i;
     div.className = "editor";
@@ -310,7 +310,7 @@ for (let i = 0; i < tasks.length; i++) {
 
     editor.container.addEventListener("copy", function (e) {
         e.preventDefault();
-        alert("Не істейсін оны копировать етіп? АААААА");
+        alert("Не істейсін оны копировать етіп? АХАХАХАХАХААХАХАХА");
     });
 
     editor.commands.addCommand({
@@ -326,7 +326,7 @@ for (let i = 0; i < tasks.length; i++) {
         name: "blockCopy",
         bindKey: { win: "Ctrl-C", mac: "Command-C" },
         exec: function () {
-            alert("Не істейсін оны копировать етіп? ААААААА");
+            alert("Не істейсін оны копировать етіп? АХАХАХАХАХАХАХА");
         },
         readOnly: false,
     });
