@@ -69,9 +69,9 @@ const tasks = [
 ];
 
 const codeTasksContainer = document.getElementById("code-tasks");
-tasks.forEach((i, index) => {
+for (let i = 0; i < tasks.length; i++) {
     const label = document.createElement("label");
-    label.textContent = `Task ${index + 1}: ${i}`;
+    label.textContent = `Task ${i}: ${tasks[i]}`;
     const div = document.createElement("div");
     div.id = "code" + i;
     div.className = "editor";
@@ -85,45 +85,44 @@ tasks.forEach((i, index) => {
     editor.setOptions({ fontSize: "14pt", tabSize: 2, useSoftTabs: true });
 
     editor.on("paste", function (text) {
-        // setTimeout(() => {
         const value = editor.getValue();
         editor.setValue(value.replace(/\r\n|\n|\r/g, ""), -1);
-        alert("Pasting is disabled!");
-        // }, 0);
+        alert("Қай жерден алдын ? АААААА");
     });
 
     editor.container.addEventListener("copy", function (e) {
         e.preventDefault();
-        alert("Copying is disabled!");
+        alert("Не істейсін оны копировать етіп? АААААА");
     });
 
     editor.commands.addCommand({
         name: "blockPaste",
         bindKey: { win: "Ctrl-V", mac: "Command-V" },
         exec: function () {
-            alert("Pasting is disabled!");
+            alert("Қай жерден алдын ? ААААА");
         },
         readOnly: false,
     });
+
     editor.commands.addCommand({
         name: "blockCopy",
         bindKey: { win: "Ctrl-C", mac: "Command-C" },
         exec: function () {
-            alert("Copying is disabled!");
+            alert("Не істейсін оны копировать етіп? ААААААА");
         },
         readOnly: false,
     });
-});
+}
 
 document.getElementById("submitButton").addEventListener("click", async () => {
     const testAnswers = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 6; i++) {
         const selected = document.querySelector(`input[name="q${i}"]:checked`);
         testAnswers.push(selected ? selected.value : null);
     }
 
     const codeAnswers = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 0; i < tasks.length; i++) {
         codeAnswers.push(editors["code" + i].getValue());
     }
 
