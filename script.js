@@ -123,9 +123,13 @@ document.getElementById("submitButton").addEventListener("click", async () => {
 
     const codeAnswers = [];
     for (let i = 0; i < tasks.length; i++) {
-        codeAnswers.push(editors["code" + i].getValue());
+        if (editors["code" + i]) {
+            codeAnswers.push(editors["code" + i].getValue());
+        } else {
+            codeAnswers.push("");
+        }
     }
-
+ 
     const docId = `${classSelect.value}_${nameSelect.value}`;
     try {
         await setDoc(doc(db, "answers", docId), {
